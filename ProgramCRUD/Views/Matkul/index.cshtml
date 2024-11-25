@@ -1,0 +1,29 @@
+﻿@model IEnumerable<ProgramCRUD.Models.Matkul>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>LIST MATA KULIAH</h1>
+
+<table class="table table-striped table-bordered table-hover table-condensed">
+    <thead>
+        <tr class="text-center" style="background-color: Lightcoral">
+            <th>Kode Mata Kuliah</th>
+            <th>Nama Mata Kuliah</th>
+            <th>List Dosen</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.KodeMataKuliah)</td>
+                <td>@Html.DisplayFor(modelItem => item.NamaMataKuliah)</td>
+                <td>
+                    <a class="btn btn-primary" style="background-color: Lightseagreen" asp-action="ListDosen" asp-route-id="@item.Id">List Dosen</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,13 @@
+﻿@model ProgramCRUD.Models.Employee
+
+<h1>Employee Details</h1>
+
+<div>
+    <p>Name: @Model.Name</p>
+    <p>NIP: @Model.NIP</p>
+    <p>Telephone: @Model.Telephone</p>
+    <p>Gender: @Model.Gender</p>
+    <p>Address: @Model.Address</p>
+    <p>Birthdate: @Model.Birthdate.ToString("yyyy-MM-dd")</p>
+    <a class="btn btn-secondary" asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,120 @@
+﻿@model ProgramCRUD.Models.Mahasiswa
+
+@{
+    ViewData["Title"] = "Edit Mahasiswa";
+}
+
+<h1>Edit <mahasiswa /></h1>
+<hr />
+
+<form asp-action="Edit" class="form-horizontal">
+    <div class="row mb-3">
+        <div class="col-md-2">
+            <label asp-for="ID" class="form-label"></label>
+        </div>
+        <div class="col-md-6">
+            <input asp-for="ID" class="form-control" readonly />
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-md-2">
+            <label asp-for="NIM" class="form-label"></label>
+        </div>
+        <div class="col-md-6">
+            <input asp-for="NIM" class="form-control" />
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-md-2">
+            <label asp-for="Name" class="form-label"></label>
+        </div>
+        <div class="col-md-6">
+            <input asp-for="Name" class="form-control" />
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-md-2">
+            <label asp-for="Gender" class="form-label">Gender</label>
+        </div>
+        <div class="col-md-6">
+            <select asp-for="Gender" class="form-select">
+                <option value="0">Select one</option>
+                <option value="L">Laki-laki</option>
+                <option value="P">Perempuan</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-md-2">
+            <label asp-for="Telephone" class="form-label"></label>
+        </div>
+        <div class="col-md-6">
+            <input asp-for="Telephone" class="form-control" />
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-md-2">
+            <label asp-for="Address" class="form-label"></label>
+        </div>
+        <div class="col-md-6">
+            <input asp-for="Address" class="form-control" />
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-md-2">
+            <label asp-for="Join_Date" class="form-label"></label>
+        </div>
+        <div class="col-md-6">
+            <input asp-for="Join_Date" class="form-control" />
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-md-2">
+            <label asp-for="Graduation_Date" class="form-label"></label>
+        </div>
+        <div class="col-md-6">
+            <input asp-for="Graduation_Date" class="form-control" />
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-md-2">
+            <label asp-for="Dosen_Wali" class="form-label"></label>
+        </div>
+        <div class="col-md-6">
+            <input asp-for="Dosen_Wali" class="form-control" />
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-md-2">
+            <label asp-for="Fakultas_Code" class="form-label"></label>
+        </div>
+        <div class="col-md-6">
+            <input asp-for="Fakultas_Code" class="form-control" />
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-md-2">
+            <label asp-for="Department_Code" class="form-label"></label>
+        </div>
+        <div class="col-md-6">
+            <input asp-for="Department_Code" class="form-control" />
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-8 text-end">
+            <input type="submit" value="Save" class="btn btn-primary me-2" />
+            <a asp-action="Index" class="btn btn-secondary">Back</a>
+        </div>
+    </div>
+</form>

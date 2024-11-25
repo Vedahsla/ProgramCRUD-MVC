@@ -1,0 +1,45 @@
+﻿@model IEnumerable<ProgramCRUD.Models.Dosen>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>LIST DATA DOSEN</h1>
+
+<br>
+
+<p>
+    <a class="btn btn-primary" asp-action="Create">Add New</a>
+</p>
+
+<table class="table table-striped table-bordered table-hover table-condensed">
+    <thead>
+        <tr class="text-center" style="background-color: Lightcoral">
+            <th>@Html.DisplayNameFor(model => model.DosenID)</th>
+            <th>@Html.DisplayNameFor(model => model.Name)</th>
+            <th>@Html.DisplayNameFor(model => model.NIP)</th>
+            <th>@Html.DisplayNameFor(model => model.Gender)</th>
+            <th>@Html.DisplayNameFor(model => model.Address)</th>
+            <th>@Html.DisplayNameFor(model => model.Active)</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.DosenID)</td>
+                <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                <td>@Html.DisplayFor(modelItem => item.NIP)</td>
+                <td>@Html.DisplayFor(modelItem => item.Gender)</td>
+                <td>@Html.DisplayFor(modelItem => item.Address)</td>
+                <td>@Html.DisplayFor(modelItem => item.Active)</td>
+                <td class="text-center">
+                    <a class="btn" style="background-color: lightseagreen;color: white;;" asp-action="Edit" asp-route-id="@item.DosenID">Edit</a>
+                    <a class="btn btn-secondary" asp-action="Details" asp-route-id="@item.DosenID">Details</a>
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.DosenID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

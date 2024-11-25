@@ -1,0 +1,21 @@
+﻿@model List<string>
+
+@{
+    ViewData["Title"] = "List Dosen";
+}
+
+<h1>LIST DOSEN</h1>
+
+<div style="border-bottom: 1px solid #000; padding-bottom: 10px; margin-bottom: 20px;">
+    <p><strong>Kode Mata Kuliah:</strong> @ViewData["KodeMataKuliah"]</p>
+    <p><strong>Nama Mata Kuliah:</strong> @ViewData["NamaMataKuliah"]</p>
+    <p><strong>Dosen Pengampu:</strong></p>
+    <ul>
+        @foreach (var dosen in Model)
+        {
+            <li>@dosen</li>
+        }
+    </ul>
+</div>
+
+<a class="btn btn-secondary" onclick="history.back()">Back</a>

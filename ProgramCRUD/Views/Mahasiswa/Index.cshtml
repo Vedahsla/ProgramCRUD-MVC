@@ -1,0 +1,77 @@
+﻿@model IEnumerable<ProgramCRUD.Models.Mahasiswa>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>LIST DATA MAHASISWA</h1>
+
+<br>
+<br />
+
+<p>
+    <a class="btn btn-primary" asp-action="Create">Add New</a>
+</p>
+<table class="table table-striped table-bordered table-hover table-condensed">
+    <thead>
+        <tr class="text-center" style="background-color: Lightcoral">
+            <th>ID</th>
+            <th>NIM</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Telephone</th>
+            <th>Address</th>
+            <th>Join Date</th>
+            <th>Graduation Date</th>
+            <th>Dosen Wali</th>
+            <th>Kode Fakultas</th>
+            <th>Kode Departemen</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NIM)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Gender)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Telephone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Join_Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Graduation_Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Dosen_Wali)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Fakultas_Code)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Department_Code)
+                </td>
+                <td>
+                    <a class="btn btn-primary" style="background-color: lightseagreen" asp-action="Edit" asp-route-id="@item.ID">Edit</a>
+                    <a class="btn btn-secondary" asp-action="Details" asp-route-id="@item.ID">Details</a>
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
